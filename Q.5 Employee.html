@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee details</title>
+</head>
+<body>
+    <script>
+        var emp= [            
+            { name: 'Vikas', age: 24, salary: 700, DOB: '12/01/1997'},
+            { name: 'Shubham', age: 23, salary: 2000, DOB: '17/07/1997'},
+            { name: 'Vipin', age: 27, salary: 8000, DOB: '05/09/1993'},
+            { name: 'Akash', age: 25, salary: 15000, DOB: '15/12/1995'},
+            { name: 'Sumit', age: 35, salary: 25000, DOB: '27/04/1985'},
+            { name: 'Rahul', age: 32, salary: 4000, DOB: '08/03/1988'},
+            { name: 'Anjali', age: 18, salary: 500, DOB: '22/10/2002'},
+            { name: 'Anuj', age: 21, salary: 800, DOB: '25/06/1999'},            
+        ];
+
+// Filter all employees with salary greater than 5000
+        for(var i in emp){
+            if(emp[i].salary>5000) 
+            console.log(emp[i]);
+        }
+
+// Group employee on the basis of their age       
+
+        var groupByAge = {};
+        for (var item in emp){
+            var age = emp[item].age;
+            if (!groupByAge[age]){
+                groupByAge[age] = [];
+            }
+                groupByAge[age].push(emp[item]);
+        }
+        console.log(groupByAge);
+
+// Fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary.
+        for(var i in emp){
+            if(emp[i].salary<1000 && emp[i].age>20) 
+                emp[i].salary=emp[i].salary*5;
+        }
+        console.log(groupByAge);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Area of Circle</title>
+    <style>
+        body{
+            font-family: 'Open Sans', sans-serif;
+        }
+        .container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            border: 4px solid #303030;
+            border-radius: 6px;
+            width: 15em;
+            padding: 40px;
+        }
+
+        button {
+            
+            background-color: #242424;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function areaOfCircle()
+        {
+            var radius, area;
+
+            radius = prompt("Enter radius of circle:");
+            area = Math.PI*radius*radius;
+
+            document.getElementById ('result').innerHTML = "Area of Circle: "+area.toFixed(3);
+        }
+    </script>
+
+    <div class="container">
+
+        <h3>Area Of Circle</h3>
+        
+        <button onclick = "areaOfCircle()">Calculate</button> 
+        
+        <div id="result" style="margin-top: 1em;"> </div>
+
+    </div>
+
+</body>
+</html>
